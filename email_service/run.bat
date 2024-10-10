@@ -1,6 +1,6 @@
 @echo off
 REM Define o diretório do projeto (substitua conforme o caminho do seu projeto)
-cd /d "C:\Users\ueste\OneDrive\Área de Trabalho\Trabalho\teste-skallar-digital\email_service"
+cd /d "C:\teste-skallar-digital\email_service"
 
 REM Ativa o ambiente virtual
 call venv\Scripts\activate
