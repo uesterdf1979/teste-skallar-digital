@@ -1,0 +1,34 @@
+summary: "Envia um e-mail para o destinatário especificado."
+description: |
+  Essa rota envia um e-mail utilizando as informações fornecidas no corpo da requisição.
+  É necessário fornecer o endereço de e-mail do destinatário, o assunto e o corpo do e-mail.
+parameters:
+  - name: "body"
+    in: "body"
+    required: True
+    schema:
+      type: "object"
+      properties:
+        to:
+          type: "string"
+          example: "destinatario@example.com"
+          description: "O endereço de e-mail do destinatário."
+        subject:
+          type: "string"
+          example: "Assunto do E-mail"
+          description: "O assunto do e-mail a ser enviado."
+        body:
+          type: "string"
+          example: "Conteúdo do e-mail"
+          description: "O corpo do e-mail a ser enviado."
+responses:
+  200:
+    description: "E-mail enviado com sucesso!"
+    examples:
+      application/json:
+        message: "E-mail enviado com sucesso!"
+  400:
+    description: "Erro ao enviar o e-mail."
+    examples:
+      application/json:
+        message: "Erro ao enviar o e-mail."
